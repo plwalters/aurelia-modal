@@ -1,4 +1,8 @@
 <template>
+  <require from="./modal"></require>
+  <require from="./header"></require>
+  <require from="./modal-body"></require>
+  <require from="./footer"></require>
   <require from='./nav-bar'></require>
 
   <nav-bar router.bind="router"></nav-bar>
@@ -6,4 +10,10 @@
   <div class="page-host">
     <router-view></router-view>
   </div>
+
+  <modal style="background: ${skin.backgroundColor}; color: ${skin.color};">
+    <header title.bind="'View Person'"></header>
+    <modal-body content.bind="'./person-information'" skin.bind="selectedSkin"></modal-body>
+    <footer buttons.bind="['Cancel']"></footer>
+  </modal>
 </template>

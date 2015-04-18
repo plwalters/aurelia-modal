@@ -1,0 +1,10 @@
+<template>
+  <div class="modal-body">
+    <compose view-model.bind="content"></compose>
+    <select value.bind="skin">
+      <option>Default</option>
+      <option repeat.for="skin of availableSkins" model.bind="skin">${skin.backgroundColor}</option>
+    </select>
+    <button click.delegate="skinMe('black')">Skin me black</button>
+  </div>
+</template>

@@ -1,10 +1,11 @@
-import {inject} from 'aurelia-framework';
+import {inject, bindable} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
 import 'bootstrap';
 import 'bootstrap/css/bootstrap.css!';
 
 @inject(Router)
 export class App {
+  @bindable selectedSkin = { backgroundColor: 'white', color: 'black' };
   constructor(router) {
     this.router = router;
     this.router.configure(config => {
