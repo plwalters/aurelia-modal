@@ -12,8 +12,8 @@
   </div>
 
   <modal style="background: ${skin.backgroundColor}; color: ${skin.color};">
-    <header title.bind="'View Person'"></header>
+    <modal-header title.bind="'View Person'"></modal-header>
     <modal-body content.bind="'./person-information'" skin.bind="selectedSkin"></modal-body>
-    <footer buttons.bind="['Cancel']"></footer>
+    <modal-footer buttons.bind="['Cancel']"></modal-footer>
   </modal>
 </template>
